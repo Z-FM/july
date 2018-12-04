@@ -1,7 +1,7 @@
 package com.july.controller;
 
 import com.github.pagehelper.PageInfo;
-import com.july.service.impl.IndexService;
+import com.july.service.IIndexService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,11 +12,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * Created by GXR on 2018/11/25.
  */
 @Controller
-@RequestMapping("index")
 public class IndexController {
 
     @Autowired
-    private IndexService indexService;
+    private IIndexService indexService;
 
     @RequestMapping("/")
     public String index() {

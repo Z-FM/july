@@ -21,7 +21,7 @@ public class IndexService implements IIndexService {
     @Override
     public PageInfo queryBlogContentPage(int pageNumber, int pageSize) {
         PageHelper.startPage(pageNumber, pageSize);
-        List<BlogContent> blogContents = blogContentMapper.queryBlogContents();
+        List<BlogContent> blogContents = blogContentMapper.queryBlogContentsByPage();
         PageInfo<BlogContent> pageInfo  = new PageInfo<>(blogContents);
         return pageInfo;
     }
